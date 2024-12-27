@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.btn {
+  position: relative;
+  width: 450px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: transform 300ms ease-in-out;
+  transform: translateZ(75px);
+}
+.side {
+  font-size: 4em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.default-side {
+  border: 10px solid #069;
+  color: #069;
+  background-color: #fff;
+  transform: translateZ(75px);
+}
+.hover-side {
+  border: 10px solid #fff;
+  color: #fff;
+  background-color: #069;
+  transform: rotateX(90deg) translateZ(75px);
+}
+.btn:hover {
+  transform: rotateX(-90deg);
+}
